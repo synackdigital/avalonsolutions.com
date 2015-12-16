@@ -4,6 +4,9 @@
   min-height: 90vh;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 @media (--large) {

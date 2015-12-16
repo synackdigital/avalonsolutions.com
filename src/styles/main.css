@@ -16,7 +16,6 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
 @import "_mq";
 @import "_base";
 @import "_type";
-@import "_themes";
 
 @import "components/brand";
 @import "components/main";

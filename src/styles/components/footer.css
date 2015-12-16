@@ -5,6 +5,7 @@
   padding-top: 120px;
   padding-bottom: 120px;
 
+  /* Inverse colors */
   background-color: var(--text-color);
   color: var(--background-color);
 }
