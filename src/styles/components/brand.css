@@ -30,6 +30,8 @@
   .Brand-arrow {
     position: absolute;
     bottom: 8px;
+    left: 50%;
+    margin-left: -14px;
     width: 0;
     height: 0;
     border-left: 14px solid transparent;
