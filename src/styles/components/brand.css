@@ -1,0 +1,39 @@
+/** @define Brand; use strict */
+
+.Brand {
+  text-align: center;
+}
+
+.Brand-svg {
+  display: inline-block;
+  width: var(--logo-width);
+  max-width: var(--logo-max-width);
+  fill: var(--logo-fill-color);
+}
+
+@media (--large) {
+  .Brand {
+    display: flex;
+    flex: 1 100%;
+    order: 1;
+    justify-content: center;
+  }
+
+  .Brand-svg {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    max-width: var(--logo-width);
+    margin-left: calc(-.5 * var(--logo-width));
+  }
+
+  .Brand-arrow {
+    position: absolute;
+    bottom: 8px;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid var(--logo-fill-color);
+  }
+}

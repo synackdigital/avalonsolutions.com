@@ -1,0 +1,27 @@
+/** @define CTA; use strict */
+
+.CTA {
+  font-weight: var(--font-weight-bold);
+  font-size: 36px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (--large) {
+  .CTA {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .CTA--cloud {
+    order: -1;
+    justify-content: flex-end;
+    padding-right: 5%;
+  }
+
+  .CTA--plm {
+    padding-left: 5%;
+  }
+}

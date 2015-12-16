@@ -1,0 +1,16 @@
+:root {
+  --background-color: #fff;
+  --text-color: #111;
+  --brand-color-1: #e64010; /* orange */
+  --brand-color-2: #00869D; /* cyan */
+  --brand-color-3: #aeBc14; /* green */
+  --brand-color-4: #954B97; /* purple */
+
+  --logo-fill-color: #000;
+  --logo-width: 180px;
+  --logo-max-width: 80%;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 600;
+  --font-weight-bold: 800;
+}

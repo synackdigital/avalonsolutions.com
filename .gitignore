@@ -1,0 +1,9 @@
+# Generated assets
+/dist/
+
+# Node modules
+/npm-debug.log
+/node_modules/
+
+# Local config
+/gulpfile.js/**/*.local.*

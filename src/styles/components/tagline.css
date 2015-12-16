@@ -1,0 +1,25 @@
+/** @define Tagline; use strict */
+
+.Tagline {
+  text-align: center;
+}
+
+.Tagline-h {
+  font-size: 24px;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.25;
+  padding: 1em;
+}
+
+@media (--large) {
+  .Tagline {
+    display: flex;
+    flex: 0 320px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px;
+
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+}

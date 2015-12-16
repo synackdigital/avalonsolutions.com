@@ -1,0 +1,16 @@
+/** @define Footer; use strict */
+
+.Footer {
+  min-height: 90vh;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.Footer-p {
+  max-width: 40em;
+  margin-right: auto;
+  margin-left: auto;
+}
