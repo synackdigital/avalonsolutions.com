@@ -4,11 +4,27 @@
   min-height: 90vh;
   padding-top: 120px;
   padding-bottom: 120px;
+  position: relative;
 
   /* Inverse colors */
   background-color: var(--text-color);
   color: var(--background-color);
 }
+
+.Footer:before {
+  content: ' ';
+  font-size: 0;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid var(--background-color);
+}
+
 
 .Footer-p {
   max-width: 40em;
