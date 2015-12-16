@@ -1,20 +1,19 @@
 /** @define CTA; use strict */
 
 .CTA {
+  margin-bottom: 24px;
   font-weight: var(--font-weight-bold);
   font-size: 36px;
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
-  top: 24px;
+  text-align: center;
 }
 
 .CTA-pulsar {
-  float: left;
-  position: relative;
-  top: -24px;
-  margin-right: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: -12px;
 }
 
 @media (--large) {
@@ -23,8 +22,18 @@
     flex: 1;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
+    top: 24px;
   }
 
+  .CTA-pulsar {
+    float: left;
+    position: relative;
+    top: -24px;
+    margin-right: 3px;
+  }
+
+  /* Cloud variation */
   .CTA--cloud {
     order: -1;
     justify-content: flex-end;
@@ -37,6 +46,7 @@
     margin-left: 3px;
   }
 
+  /* PLM variation */
   .CTA--plm {
     padding-left: 5%;
   }
