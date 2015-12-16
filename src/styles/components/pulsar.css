@@ -32,6 +32,10 @@
   animation-iteration-count: infinite;
 }
 
+.Pulsar--alt .Pulsar-halo {
+  animation-delay: .5s;
+}
+
 .Pulsar--alt .Pulsar-core,
 .Pulsar--alt .Pulsar-halo {
   border-color: var(--brand-color-2);
