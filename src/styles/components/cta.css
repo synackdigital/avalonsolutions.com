@@ -3,8 +3,18 @@
 .CTA {
   font-weight: var(--font-weight-bold);
   font-size: 36px;
+  line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+  top: 28px;
+}
+
+.CTA-pulsar {
+  float: left;
+  position: relative;
+  top: -26px;
+  margin-right: 3px;
 }
 
 @media (--large) {
@@ -19,6 +29,12 @@
     order: -1;
     justify-content: flex-end;
     padding-right: 5%;
+  }
+
+  .CTA--cloud .CTA-pulsar {
+    float: right;
+    margin-right: 0;
+    margin-left: 3px;
   }
 
   .CTA--plm {
