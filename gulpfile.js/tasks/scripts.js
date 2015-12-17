@@ -14,7 +14,7 @@ gulp.task('scripts', ['scripts:lint'], function () {
 });
 
 gulp.task('scripts:lint', function() {
-  return gulp.src(config.src)
+  return gulp.src(config.watch)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
