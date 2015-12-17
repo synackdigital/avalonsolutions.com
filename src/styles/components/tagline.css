@@ -12,14 +12,6 @@
     padding-bottom 120ms ease-out;
 }
 
-.Tagline.is-cloudHighlighted {
-  background-color: var(--brand-color-1);
-}
-
-.Tagline.is-plmHighlighted {
-  background-color: var(--brand-color-2);
-}
-
 .Tagline.is-cloudHighlighted,
 .Tagline.is-plmHighlighted,
 .Tagline.is-cloudExpanded,
@@ -27,8 +19,24 @@
   padding-top: 2em;
   padding-bottom: 2em;
 }
+.Tagline.is-cloudHighlighted {
+  background-color: var(--brand-color-1) !important;
+}
+.Tagline.is-plmHighlighted {
+  background-color: var(--brand-color-2) !important;
+}
+.Tagline.is-cloudExpanded {
+  background-color: var(--brand-color-1);
+}
+.Tagline.is-plmExpanded {
+  background-color: var(--brand-color-2);
+}
 
 .Tagline-h {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
   font-size: 21px;
   font-weight: var(--font-weight-normal);
   line-height: 1.25;

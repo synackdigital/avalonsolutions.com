@@ -13,11 +13,10 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
 
 function ready(fn) {
-  if (document.readyState !== 'loading'){
+  if (document.readyState !== 'loading')
     fn();
-  } else {
+  else
     document.addEventListener('DOMContentLoaded', fn);
-  }
 }
 
 ready(function() {
@@ -33,60 +32,49 @@ ready(function() {
 });
 
 function mouseEventHandler(event) {
+  let slug = event.currentTarget.dataset.slug;
+  let box = document.querySelectorAll('.Tagline')[0];
+
   switch (event.type) {
     case 'mouseover':
-      toggleBoxState('highlighted', event.currentTarget.dataset.slug);
+      toggleElState(box, 'highlighted', slug);
     break;
     case 'mouseout':
-      toggleBoxState('highlighted', null);
+      toggleElState(box, 'highlighted', slug);
     break;
     case 'click':
-      toggleBoxState('expanded', event.currentTarget.dataset.slug);
+      toggleElState(box, 'expanded', slug);
     break;
   }
 }
 
-function toggleBoxState(state, slug) {
-  let box = document.querySelectorAll('.Tagline')[0];
+function toggleElState(el, state, slug) {
+  let className = '';
 
   switch (state) {
     case 'highlighted':
-      if (slug !== null) {
-        let className = 'is-'+slug+'Highlighted';
-        if (!hasClass(box, className)) {
-          addClass(box, className);
-        }
-      }
-      else {
-        if (hasClass(box, 'is-cloudHighlighted') && !hasClass(box, 'is-cloudExpanded')) {
-          removeClass(box, 'is-cloudHighlighted');
-        }
-        if (hasClass(box, 'is-plmHighlighted') && !hasClass(box, 'is-plmExpanded')) {
-          removeClass(box, 'is-plmHighlighted');
-        }
-      }
+      className = 'is-'+slug+'Highlighted';
     break;
     case 'expanded':
-      if (slug !== null) {
-        let className = 'is-'+slug+'Expanded';
-        if (!hasClass(box, className)) {
-          box.style.minHeight = box.offsetHeight + 'px';
-          addClass(box, className);
-        }
-        else {
-          removeClass(box, className);
-        }
-      }
-      else {
-        if (hasClass(box, 'is-cloudExpanded')) {
-          removeClass(box, 'is-cloudExpanded');
-        }
-        if (hasClass(box, 'is-plmExpanded')) {
-          removeClass(box, 'is-plmExpanded');
-        }
-      }
+      className = 'is-'+slug+'Expanded';
     break;
   }
+
+  switch (className) {
+    case 'is-cloudExpanded':
+      if (hasClass(el, 'is-plmExpanded'))
+        removeClass(el, 'is-plmExpanded');
+    break;
+    case 'is-plmExpanded':
+      if (hasClass(el, 'is-cloudExpanded'))
+        removeClass(el, 'is-cloudExpanded');
+    break;
+  }
+
+  if (!hasClass(el, className))
+    addClass(el, className);
+  else
+    removeClass(el, className);
 }
 
 function hasClass(el, className) {
