@@ -5,7 +5,7 @@ const bs = require('browser-sync').get('bs');
 const postcss = require('gulp-postcss');
 const nano = require('gulp-cssnano');
 
-gulp.task('styles', function () {
+gulp.task('styles', ['styles:lint'], function () {
   return gulp.src(config.src)
     // .pipe(changed(config.dest))
     .pipe(postcss([
@@ -18,4 +18,14 @@ gulp.task('styles', function () {
     .pipe(nano())
     .pipe(gulp.dest(config.dest))
     .pipe(bs.stream());
+});
+
+gulp.task('styles:lint', function() {
+  return gulp.src(config.watch)
+    .pipe(postcss([
+      require('postcss-bem-linter'),
+      require('postcss-reporter')({
+        clearMessages: true
+      })
+    ]));
 });
