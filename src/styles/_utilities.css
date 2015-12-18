@@ -1,0 +1,11 @@
+.u-cloudtext {
+  color: var(--brand-color-1) !important;
+}
+
+.u-plmtext {
+  color: var(--brand-color-2) !important;
+}
+
+.u-block {
+  display: block !important;
+}
