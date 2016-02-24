@@ -1,3 +1,7 @@
+.u-underline {
+  text-decoration: underline;
+}
+
 .u-cloudtext {
   color: var(--brand-color-1) !important;
 }
